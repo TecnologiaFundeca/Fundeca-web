@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundeca</title>
+    <link rel="stylesheet" href="../Estilos/style.css">
+    <link rel="icon" type="image/png" href="../Imagenes/Logotipo fundeca.svg">
+</head>
+<body>
+    <!--Inicio de navBar-->
+    <header class="header">
+        <div class="logo">
+            <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Logo Fundeca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Filosofía</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#">Organización</a>
+                    <div class="dropdown-contenido">
+                        <a href="#">Presidente de la fundación</a>
+                        <a href="#">Estructura Organizativa</a>
+                        <a href="#">Directorio</a>
+                        <a href="#">Marco Normativo</a>
+                    </div>
+                </li>
+                <li><a href="#">Programas</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn"><button>Contacto</button></a>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+        <div class="overlay" id="mobile-menu"> 
+            <a onclick="closeNav()" href="#" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Filosofía</a>
+                <div class="dropdown-mobile">
+                <a href="#">Organización</a>
+                <div class="dropdown-mobile-contenido">
+                    <a href="#">Presidente de la fundación</a>
+                    <a href="#">Estructura Organizativa</a>
+                    <a href="#">Directorio</a>
+                    <a href="#">Marco Normativo</a>
+                </div>
+                </div>
+                <a href="#">Programas</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <!--Fin de NavBar-->
+    <!-- Hero principal con curva -->
+    <section class="hero">
+        <div class="hero-contenido">
+            <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Fundeca-Yerba Caracas">
+        </div>        
+    </section>
+    
+    <script type="text/JavaScript" src="../JavaScript/nav.js"></script>
+</body>
+</html>
