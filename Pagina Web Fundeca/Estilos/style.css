@@ -6,7 +6,7 @@
     padding: 0;
 }
 body {
-    background-color: rgba(255, 255, 255, 0.966);
+    background-color: rgba(167, 253, 206, 0.425);
 }
 .header{
     background-color: rgba(121, 184, 131, 0.966);
@@ -78,6 +78,33 @@ body {
     .menu{
         display: inherit;
     }
+    .dropdown-mobile {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .overlay .dropdown-mobile-contenido {
+        display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease; /* <- suavidad */
+    }
+
+    /* Se despliega al tocar/hover */
+    .header .overlay .dropdown-mobile:hover .dropdown-mobile-contenido {
+    max-height: 500px; /* suficientemente grande para mostrar todo */
+    opacity: 1;
+}
+
+    .header .overlay .dropdown-mobile-contenido a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ddd;  /* un poco más claro */
+    padding-left: 20px; /* sangría */
+}
+
 }
 /*Nav Responsive*/
 .header a{
@@ -140,7 +167,7 @@ li.dropdown{
   position: absolute;
   background-color:rgba(121, 184, 131, 0.966);
   /*min-width: 160px;*/
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.123);
   z-index: 1;
   top: 100%;
   left: 0;
@@ -164,6 +191,47 @@ li.dropdown{
 .hero {
     background: rgba(121, 184, 131, 0.966); /* verde */
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
     border-radius: 0 0 50% 50%;
+}
+.hero .hero-contenido .fundeca{
+    font-size: 700%;
+    color: #fff;
+    padding: 10% 0PX 0PX;
+}
+.hero .hero-contenido .fundeca-texto{
+    padding: 0 25% 5% ;
+    color: #fff;
+}
+/*Inicio de estilos de la primera pagina*/
+.Descripcion-fundeca{
+    padding-top: 10%;
+    
+}
+/*.Descripcion-fundeca .container-somos{
+    
+}*/
+.Descripcion-fundeca .container-somos .quienes-somos{
+    display: block;
+    border: 2px solid rgba(121, 184, 131, 0.966);
+    margin-right: 50%;
+    margin-left: 10px;
+}
+.Descripcion-fundeca .somos{
+    text-align: center;
+    padding-bottom: 5%;
+    font-size: 250%;
+}
+.Descripcion-fundeca .container-somos .quienes-somos .somos-text{
+    font-size: 20px;
+    padding: 15px;
+}
+.Descripcion-fundeca .container-somos .somos-img{
+    display: block;
+    margin-left: 50%;
+    border: 2px solid rgba(121, 184, 131, 0.966);
+    border-radius: 50%;
+    float: right;
+    margin-top: 2px;
+    
 }
