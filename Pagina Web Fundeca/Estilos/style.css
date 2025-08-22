@@ -204,34 +204,14 @@ li.dropdown{
     color: #fff;
 }
 /*Inicio de estilos de la primera pagina*/
-.Descripcion-fundeca{
+.quienes-somos{
     padding-top: 10%;
     
 }
-/*.Descripcion-fundeca .container-somos{
-    
-}*/
-.Descripcion-fundeca .container-somos .quienes-somos{
-    display: block;
-    border: 2px solid rgba(121, 184, 131, 0.966);
-    margin-right: 50%;
-    margin-left: 10px;
-}
-.Descripcion-fundeca .somos{
+.quienes-somos h2{
     text-align: center;
-    padding-bottom: 5%;
-    font-size: 250%;
 }
-.Descripcion-fundeca .container-somos .quienes-somos .somos-text{
-    font-size: 20px;
-    padding: 15px;
-}
-.Descripcion-fundeca .container-somos .somos-img{
-    display: block;
-    margin-left: 50%;
-    border: 2px solid rgba(121, 184, 131, 0.966);
-    border-radius: 50%;
-    float: right;
-    margin-top: 2px;
-    
+.somos{
+    display: flex;
+    gap: 15px;
 }
