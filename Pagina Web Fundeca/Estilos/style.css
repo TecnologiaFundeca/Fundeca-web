@@ -16,14 +16,19 @@ body {
     height: 85px;
     padding: 5px 5%;
     font-size: 130%;
-    font-family: "DM Serif Text", serif;;
+    font-family: "DM Serif Text", serif;
+    position: fixed;   /* lo fija arriba */
+    top: 0;            /* pegado arriba */
+    left: 0;
+    width: 100%;       /* ocupa todo el ancho */
+    z-index: 1000;    
 }
 .header .logo{
     cursor: pointer;
     margin-right: auto;
 }
 .header .logo img{
-    height: 200px;
+    height: 250px;  
     width: auto;
     transition: all 0.3s;
 }
@@ -189,7 +194,8 @@ li.dropdown{
 /*Fin de Diseño de NavBar, Dropdown y su mediaquery*/
 /*Hero, logo fundeca*/
 .hero {
-    background: rgba(121, 184, 131, 0.966); /* verde */
+    margin-top: 85px;  /*espacio para que no tape el navbar */
+    background: rgba(121, 184, 131, 0.966);
     text-align: center;
     padding-bottom: 20%;
     border-radius: 0 0 50% 50%;
@@ -200,18 +206,37 @@ li.dropdown{
     padding: 10% 0PX 0PX;
 }
 .hero .hero-contenido .fundeca-texto{
-    padding: 0 25% 5% ;
+    padding: 0 35% 0 ;
     color: #fff;
 }
 /*Inicio de estilos de la primera pagina*/
 .quienes-somos{
-    padding-top: 10%;
+    padding-top: 5%;
     
 }
 .quienes-somos h2{
     text-align: center;
+    font-size: 300%;
+    padding-bottom: 5%;
 }
 .somos{
     display: flex;
-    gap: 15px;
+    gap: 20%;
+    margin:  0px 30px 0px 30px;
 }
+.quienes-somos .somos img{
+    border: 2px solid;
+    border-radius: 50%;
+}
+/*Fin de quienes somos*/
+
+
+
+
+
+
+
+
+
+
+
