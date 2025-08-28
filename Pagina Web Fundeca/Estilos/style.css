@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Quicksand:wght@300..700&display=swap');
-/*Diseño NavBar*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: rgb(111, 186, 86);
+    background: linear-gradient(135deg, rgb(111, 186, 86), rgb(60, 150, 90));
+    color: #333;
+    margin-top: 85px; /* Agrega margen para el header fijo */
 }
+/*Diseño NavBar*/
 .header{
-    background-color: rgb(4, 131, 23);
+    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: background 0.3s ease;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -49,9 +54,23 @@ body {
 .header .nav-links a{
     font-size: 1000;
     color: #fff;
+    position: relative;
+    padding: 8px 12px;
 }
 .header .nav-links li a:hover{
     color: rgb(255, 255, 255);
+}
+.header .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 100%; height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.header .nav-links a:hover::after {
+    transform: scaleX(1);
 }
 .menu{
     display: none;
@@ -192,46 +211,143 @@ li.dropdown{
   display: block;
 }
 /*Fin de Diseño de NavBar, Dropdown y su mediaquery*/
+/* Barra de redes sociales lateral */
+.social-bar {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.social-bar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Colores de cada red */
+.social-bar .instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.social-bar .facebook {
+    background: #1877f2;
+}
+
+/* Efecto hover */
+.social-bar .icon:hover {
+    transform: translateX(8px) scale(1.1);
+    box-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+}
+
 /*Hero, logo fundeca*/
 .hero {
-    margin-top: 85px;  /*espacio para que no tape el navbar */
-    background: rgba(4, 131, 23);
+    margin-top: 85px;
+    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
     text-align: center;
-    padding-bottom: 20%;
+    padding: 8% 10% 15%;
     border-radius: 0 0 50% 50%;
+    color: #fff;
+    animation: fadeIn 1.5s ease-out;
 }
 .hero .hero-contenido .fundeca{
-    font-size: 700%;
-    color: #fff;
-    padding: 10% 0PX 0PX;
+    font-size: 6rem;
+    letter-spacing: 3px;
+    animation: slideUp 1.2s ease-out;
 }
 .hero .hero-contenido .fundeca-texto{
-    padding: 0 35% 0 ;
-    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 /*Inicio de estilos de la primera pagina*/
-.quienes-somos{
-    padding-top: 5%;
-    
+.quienes-somos {
+    color: #fff;
+    padding: 50px 10%;
 }
-.quienes-somos h2{
+
+.quienes-somos h2 {
     text-align: center;
-    font-size: 300%;
-    padding-bottom: 5%;
-    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
 }
-.somos{
+
+
+.somos {
     display: flex;
-    gap: 20%;
-    margin:  0px 30px 0px 30px;
-    color: #fff;
-    font-size: 22px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
-.quienes-somos .somos img{
-    border: 2px solid;
-    border-radius: 50%;
+
+.somos-texto {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
 }
+
+.somos-texto p b {
+    color: #ffd700; /* resalta los nombres de proyectos en dorado */
+}
+
+.somos-foto img {
+    transition: transform 0.4s ease;
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.somos-foto img:hover {
+    transform: scale(1.05);
+}
+/* Estado inicial (oculto y desplazado) */
+.animate-left, .animate-right {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.animate-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dirección de entrada */
+.animate-left {
+    transform: translateX(-60px);
+}
+.animate-right {
+    transform: translateX(60px);
+}
+
 /*Fin de quienes somos*/
+
 /*Estilos Pagina Contacto*/
 .contacto {
     width: 100%;
@@ -256,14 +372,18 @@ li.dropdown{
 
 .card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 380px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
 .card-title {
   position: relative;
   height: 170px;
