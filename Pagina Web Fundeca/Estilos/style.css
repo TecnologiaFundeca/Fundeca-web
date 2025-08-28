@@ -8,7 +8,25 @@
 body {
     background: linear-gradient(135deg, rgb(111, 186, 86), rgb(60, 150, 90));
     color: #333;
-    margin-top: 85px; /* Agrega margen para el header fijo */
+}
+/*Diseño Cintillo*/
+.top-image {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start; /* alinea arriba si la imagen es más alta */
+}
+
+.top-image img {
+    height: 100%;      /* ocupa todo el alto del div */
+    width: 40%;       /* mantiene proporción, no se estira */
+    object-fit: cover; /* recorta si es más grande */
+    display: block;
+    margin-left: 0;    /* alineado a la izquierda */
 }
 /*Diseño NavBar*/
 .header{
@@ -22,11 +40,11 @@ body {
     padding: 5px 5%;
     font-size: 130%;
     font-family: "DM Serif Text", serif;
-    position: fixed;   /* lo fija arriba */
+    position: sticky;   /* lo fija arriba */
     top: 0;            /* pegado arriba */
     left: 0;
     width: 100%;       /* ocupa todo el ancho */
-    z-index: 1000;    
+    z-index: 1;    
 }
 .header .logo{
     cursor: pointer;
@@ -251,7 +269,7 @@ li.dropdown{
 
 /*Hero, logo fundeca*/
 .hero {
-    margin-top: 85px;
+    margin-top: 0px;
     background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
     text-align: center;
     padding: 8% 10% 15%;
@@ -300,7 +318,7 @@ li.dropdown{
 
 .somos-texto {
     flex: 1;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
 }
@@ -321,7 +339,7 @@ li.dropdown{
 .somos-foto img:hover {
     transform: scale(1.05);
 }
-/* Estado inicial (oculto y desplazado) */
+/* Animaciones Somos */
 .animate-left, .animate-right {
     opacity: 0;
     transform: translateY(40px);
@@ -414,9 +432,45 @@ li.dropdown{
   font-size: 1.2rem;
   color: #333;
 }
-
-
-
+/*Fin de diseño de filosofia*/
+/*Diseño de Footer*/
+.footer {
+    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
+    color: #fff;
+    text-align: center;
+    padding: 20px 10%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+}
+/*Fin de diseño de Footer*/
+/*Estilos Pagina Presidente*/
+.president-foto h2{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 2.5rem;
+}
+.president-foto img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    height: 300px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.president-informacion{
+    width: 80%;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
 
 
 
