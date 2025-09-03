@@ -51,7 +51,7 @@ body {
     margin-right: auto;
 }
 .header .logo img{
-    height: 250px;  
+    height: 75px;  
     width: auto;
     transition: all 0.3s;
 }
@@ -205,28 +205,28 @@ li.dropdown{
     position: relative;
 }
 .dropdown-contenido {
-  display: none;
-  position: absolute;
-  background-color:rgba(4, 131, 23);
-  /*min-width: 160px;*/
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.123);
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  font-size: 70%;
+    display: none;
+    position: absolute;
+    background-color:rgba(4, 131, 23);
+    /*min-width: 160px;*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.123);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    font-size: 70%;
 }
 .dropdown-contenido a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 .dropdown-contenido a:hover {
     background-color: #d6d5d55e;
 }
 .dropdown:hover .dropdown-contenido {
-  display: block;
+    display: block;
 }
 /*Fin de Diseño de NavBar, Dropdown y su mediaquery*/
 /* Barra de redes sociales lateral */
@@ -372,6 +372,12 @@ li.dropdown{
     height: 100%;
 }
 /*filosofia*/
+.filosofia{
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    margin: 5% 5%;
+    padding: 3%;
+}
 .title-filosofia{
     text-align:center;
     font-size: 300%;
@@ -380,57 +386,53 @@ li.dropdown{
 }
 /*Card de filosofia*/
 .filosofia-cards {
-  display: flex;
-  gap: 150px;
-  justify-content: center;
-  margin: 40px 0;
-  margin-top: 5%;  /*espacio para que no tape el navbar */
-  flex-wrap: wrap;
+    display: flex;
+    gap:5%;
+    justify-content: center;
+    margin: 40px 0;
+    margin-top: 5%;  /*espacio para que no tape el navbar */
+    flex-wrap: wrap;
 }
 
 .card {
-  background: #fff;
-  width: 380px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 29%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 .card-title {
-  position: relative;
-  height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  opacity: 0.8;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
 }
 
 .card-title h2 {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  margin: 0;
-  font-size: 2.5em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.678);
+    position: relative;
+    color: #fff;
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.678);
 }
 
 .card p {
-  padding: 16px;
-  font-size: 1.2rem;
-  color: #333;
+    padding: 16px;
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 /*Fin de diseño de filosofia*/
 /*Diseño de Footer*/
@@ -446,20 +448,26 @@ li.dropdown{
 }
 /*Fin de diseño de Footer*/
 /*Estilos Pagina Presidente*/
+.presidente{
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    margin: 5% 5%;
+    padding: 2%;
+}
 .president-foto h2{
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
     margin-top: 40px;
     font-size: 2.5rem;
+    
 }
 .president-foto img{
     display: block;
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    height: 300px;
-    width: 300px;
+    width: 20%;
     margin-bottom: 30px;
 }
 .president-informacion{
@@ -471,7 +479,235 @@ li.dropdown{
     line-height: 1.6;
     text-align: justify;
 }
+/*Fin de estilos de la pagina presidente*/
+/*Estilos Pagina Estructura Organizativa*/
+.estructura{
+    margin: 5% 5%;
+    padding: 5%;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+#text-estructura{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.estructura img{
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+/*Fin de estilos de la pagina estructura organizativa*/
+/*Estilos Pagina Directorio*/
+.directorio {
+    width: 80%;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+.directorio ol.cargos {
+    list-style-type: disc;
+    margin-left: 2em;
+}
 
+.directorio ul.personas {
+    list-style-type: circle;
+    margin-left: 2em;
+}
+/*Fin de estilos directorio*/
+/*Estilos Marco normativo*/
+.marconormativo{
+    text-align: center;
+    color: #fff;
+    margin: 5% 5%;
+    margin-bottom: 5%;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+.title-marco{
+    font-size: 30px;
+    padding: 5%;
+}
+.marconormativo p{
+    font-size: 1.2rem;
+    margin: 0 5% ;
+    padding-bottom: 5%;
+}
+/*Fin de estilos de marco normativo*/
+/*Estilos de programas*/
+.programas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    color: #fff;
+    margin: 5% 10%;
+}
 
+.card-programas,
+.card-programasleft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    gap: 45px;
+    padding: 5%;
+}
 
+.card-programas h2,
+.card-programasleft h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 40px;
+}
+
+.card-programas img,
+.card-programasleft img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #eee;
+}
+
+.card-programas .card-content,
+.card-programasleft .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-programas {
+    flex-direction: row;
+}
+
+.card-programasleft {
+    flex-direction: row-reverse;
+}
+/* Responsive de programas */
+@media (max-width: 900px) {
+    .programas {
+        margin: 5% 2%;
+        gap: 20px;
+    }
+    .card-programas,
+    .card-programasleft {
+        width: 100%;
+        padding: 16px;
+        gap: 20px;
+    }
+    .card-programas h2,
+    .card-programasleft h2 {
+        font-size: 2rem;
+    }
+    .card-programas img,
+    .card-programasleft img {
+        width: 40vw;
+        max-width: 220px;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .programas {
+        margin: 5% 1%;
+        gap: 12px;
+    }
+    .card-programas,
+    .card-programasleft {
+        flex-direction: column !important;
+        align-items: stretch;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+        min-height: unset;
+    }
+    .card-programas img,
+    .card-programasleft img {
+        width: 100%;
+        max-width: 100%;
+        height: 160px;
+        margin: 0 auto;
+    }
+    .card-programas h2,
+    .card-programasleft h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    .card-programas .card-content,
+    .card-programasleft .card-content {
+        padding: 0;
+    }
+}
+/*Fin de estilos de programas*/
+/*Estilos de contacto*/
+.card-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 32px;
+    margin: 40px auto;
+    max-width: 900px;
+    align-items: stretch;
+}
+
+.card-mapa {
+    flex: 1 1 50%;
+    min-width: 280px;
+    display: flex;
+    align-items: stretch;
+}
+
+.card-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0 16px 16px;
+}
+
+.card-info h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 2.7rem;
+}
+
+.card-info h3 {
+    margin: 12px 0 4px 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.card-info p {
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    .card-contacto {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+    .card-mapa, .card-info {
+        min-width: unset;
+        padding: 0;
+    }
+    #map {
+        min-height: 220px;
+    }
+}
 

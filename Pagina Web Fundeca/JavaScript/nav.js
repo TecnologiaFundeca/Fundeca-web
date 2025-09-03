@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight - 100) {
         el.classList.add("show");
+      } else {
+        el.classList.remove("show")
       }
     });
   }
