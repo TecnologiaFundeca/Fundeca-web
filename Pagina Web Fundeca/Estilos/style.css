@@ -5,10 +5,9 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(135deg, rgb(111, 186, 86), rgb(60, 150, 90));
+    background: #fff;
     color: #fff;
     font-family: "Poppins", sans-serif;
-
 }
 /*Diseño Cintillo*/
 .top-image {
@@ -48,7 +47,7 @@ body {
     top: 0;            /* pegado arriba */
     left: 0;
     width: 100%;       /* ocupa todo el ancho */
-    z-index: 1;    
+    z-index: 1000;    
 }
 .header .logo{
     cursor: pointer;
@@ -274,13 +273,28 @@ li.dropdown{
 /*Hero, logo fundeca*/
 .hero {
     margin-top: 0px;
-    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
+    position: relative;
+    overflow: hidden;
     text-align: center;
     padding: 5% 10% 8%;
     border-radius: 0 0 50% 50%;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.249);
     color: #fff;
     animation: fadeIn 1.5s ease-out;
+}
+.hero-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none; /* El video no bloquea clicks */
+    opacity: 0.9;
+}
+.hero-contenido{
+    position: relative;
+    z-index: 1;
 }
 .hero .hero-contenido .fundeca{
     font-size: 12rem;
@@ -323,6 +337,7 @@ li.dropdown{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    color: black;
 }
 
 .somos-texto {
