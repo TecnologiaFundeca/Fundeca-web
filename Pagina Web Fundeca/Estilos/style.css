@@ -6,7 +6,7 @@
 }
 body {
     background: #fff;
-    color: #fff;
+    color: black;
     font-family: "Poppins", sans-serif;
 }
 /*Diseño Cintillo*/
@@ -492,13 +492,16 @@ li.dropdown{
     margin: 5% 5%;
     padding: 2%;
 }
+.president-foto h2, h3{
+    text-align: center;  
+}
 .president-foto h2{
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-top: 40px;
     font-size: 2.5rem;
-    
+    color: #176d2c;
+}
+.president-foto h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 .president-foto img{
     display: block;
@@ -512,11 +515,25 @@ li.dropdown{
     width: 80%;
     margin: 20px auto 60px;
     padding: 0 20px;
-    color: #fff;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
 }
+.president-informacion ol {
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    margin-top: 1%;
+    max-width: 600px;
+    list-style-position: inside;
+    padding: 1rem;
+}
+
+.president-informacion li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    text-indent: -0.5rem;
+}
+
 /*Fin de estilos de la pagina presidente*/
 /*Estilos Pagina Estructura Organizativa*/
 .estructura{
@@ -528,7 +545,6 @@ li.dropdown{
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
 }
 #text-estructura{
-    color: #fff;
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
@@ -544,7 +560,6 @@ li.dropdown{
     width: 80%;
     margin: 20px auto 60px;
     padding: 0 20px;
-    color: #fff;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
@@ -564,14 +579,13 @@ li.dropdown{
 /*Estilos Marco normativo*/
 .marconormativo{
     text-align: center;
-    color: #fff;
     margin: 5% 5%;
     margin-bottom: 5%;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
 }
 .title-marco{
-    font-size: 30px;
+    font-size: 40px;
     padding: 5%;
 }
 .marconormativo p{
@@ -587,7 +601,7 @@ li.dropdown{
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    color: #fff;
+    color: black;
     margin: 5% 10%;
 }
 
@@ -608,6 +622,7 @@ li.dropdown{
     text-align: center;
     margin-bottom: 16px;
     font-size: 40px;
+    color: #176d2c;
 }
 
 .card-programas img,
@@ -759,7 +774,6 @@ li.dropdown{
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     padding: 5% 5%;
     margin: 5% 5%;
-    font-size: 1.2rem;
     line-height: 1.7;
     text-align: justify;
 }
