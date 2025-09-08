@@ -695,6 +695,7 @@ li.dropdown{
     display: flex;
     flex-direction: row;
     gap: 32px;
+    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0)) ;
     color: #fff;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
