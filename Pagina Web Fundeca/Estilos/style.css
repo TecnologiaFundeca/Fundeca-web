@@ -40,13 +40,12 @@ body {
     padding: 5px 5%;
     font-size: 130%;
     font-family: "League Gothic", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    position: sticky;   /* lo fija arriba */
-    top: 0;            /* pegado arriba */
+    position: sticky;
+    top: 0;
     left: 0;
-    width: 100%;       /* ocupa todo el ancho */
+    width: 100%;
     z-index: 1000;    
 }
 .header .logo{
@@ -128,26 +127,48 @@ body {
         text-align: center;
     }
 
+    /* Submenú móvil cerrado */
     .header .overlay .dropdown-mobile-contenido {
         display: flex;
-    flex-direction: column;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s ease; /* <- suavidad */
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
     }
 
-    /* Se despliega al tocar/hover */
-    .header .overlay .dropdown-mobile:hover .dropdown-mobile-contenido {
-    max-height: 500px; /* suficientemente grande para mostrar todo */
-    opacity: 1;
-}
+    /* Submenú abierto */
+    .dropdown-mobile.active .dropdown-mobile-contenido {
+        max-height: 500px;
+        opacity: 1;
+    }
 
     .header .overlay .dropdown-mobile-contenido a {
-    font-size: 20px;
-    font-weight: 400;
-    color: #ddd;  /* un poco más claro */
-    padding-left: 20px; /* sangría */
+        font-size: 20px;
+        font-weight: 400;
+        color: #ddd;
+        padding-left: 20px;
+    }
+
+    /* Flecha animada */
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    .dropdown-mobile .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #fff; /* color de la flecha */
+    transition: transform 0.3s ease;
+}
+    .dropdown-mobile.active .arrow {
+    transform: rotate(90deg);
 }
 
 }
@@ -159,10 +180,10 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3000;
     left: 0;
     top: 0;
-    background-color: rgba(33, 49, 63, .95);
+    background-color: rgba(2, 63, 6, 0.95);
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -191,7 +212,7 @@ body {
     right: 45px;
     font-size: 65px;
 }
-/*MediaQuery NavBar heigth*/
+/*MediaQuery NavBar height*/
 @media screen and (max-height:450px){
     .header .overlay a{
         font-size: 20px;
@@ -202,7 +223,7 @@ body {
         right: 35px;
     }
 }
-/*Dropdown*/
+/*Dropdown Desktop*/
 li.dropdown{
     display: inline-block;
     position: relative;
@@ -211,7 +232,6 @@ li.dropdown{
     display: none;
     position: absolute;
     background-color:rgba(4, 131, 23);
-    /*min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.123);
     z-index: 1;
     top: 100%;
@@ -231,7 +251,8 @@ li.dropdown{
 .dropdown:hover .dropdown-contenido {
     display: block;
 }
-/*Fin de Diseño de NavBar, Dropdown y su mediaquery*/
+/*Fin de Diseño de NavBar*/
+
 /* Barra de redes sociales lateral */
 .social-bar {
     position: fixed;
@@ -388,7 +409,14 @@ li.dropdown{
 .animate-right {
     transform: translateX(60px);
 }
-
+@media screen and (max-width: 800px) {
+    .somos {
+        flex-direction: column;
+    }
+    .somos-foto img {
+        max-width: 100%;
+    }
+}
 /*Fin de quienes somos*/
 
 /*Estilos Pagina Contacto*/
@@ -396,6 +424,67 @@ li.dropdown{
     width: 100%;
     height: 100%;
 }
+.card-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0)) ;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 32px;
+    margin: 40px auto;
+    max-width: 900px;
+    align-items: stretch;
+}
+
+.card-mapa {
+    flex: 1 1 50%;
+    min-width: 280px;
+    display: flex;
+    align-items: stretch;
+}
+
+.card-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0 16px 16px;
+}
+
+.card-info h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 2.7rem;
+}
+
+.card-info h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.card-info p {
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    .card-contacto {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+    .card-mapa, .card-info {
+        min-width: unset;
+        padding: 0;
+    }
+    #map {
+        min-height: 220px;
+    }
+}
+/*Fin de estilos de contacto*/
 /*filosofia*/
 .filosofia-cards {
     display: flex;
@@ -452,34 +541,77 @@ li.dropdown{
     line-height: 1.7;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+    .filosofia-cards{
+        margin: auto;
+        padding: 5%;
+    }
     .filo-card, .filo-card-reverse {
         flex-direction: column !important;
-        padding: 16px;
         gap: 16px;
         align-items: stretch;
+        margin: 0;
+        padding: 10%;
     }
     .filo-card-img {
-        max-width: 100%;
-        min-width: unset;
-        flex: unset;
+        display: none;
     }
-    .filo-card-img img {
-        max-width: 100%;
+    .filo-card-title {
+        text-align: center;
+        }
+        .animate-left,
+    .animate-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
     }
 }
+
 /*Fin de diseño de filosofia*/
 /*Diseño de Footer*/
 .footer {
     background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0));
     color: #fff;
     text-align: center;
-    padding: 20px 10%;
+    padding: 20px 1%;
     position: relative;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
     font-size: 70%;
+}
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.footer-texto {
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+}
+
+@media (max-width: 800px) {
+    .footer-logo {
+        height: 32px;
+    }
+    .footer-contenido {
+        gap: 8px;
+    }
+    .footer-texto {
+        font-size: 0.9em;
+    }
 }
 #gdc{
     font-size: 140%;
@@ -615,6 +747,7 @@ li.dropdown{
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     gap: 45px;
     padding: 5%;
+    
 }
 
 .card-programas h2,
@@ -624,15 +757,6 @@ li.dropdown{
     font-size: 40px;
     color: #176d2c;
 }
-
-.card-programas img,
-.card-programasleft img {
-    width: 30%;
-    object-fit: cover;
-    border-radius: 12px;
-    background: #eee;
-}
-
 .card-programas .card-content,
 .card-programasleft .card-content {
     flex: 1;
@@ -649,124 +773,140 @@ li.dropdown{
 .card-programasleft {
     flex-direction: row-reverse;
 }
-/* Responsive de programas */
-@media (max-width: 900px) {
-    .programas {
-        margin: 5% 2%;
-        gap: 20px;
-    }
-    .card-programas,
-    .card-programasleft {
-        width: 100%;
-        padding: 16px;
-        gap: 20px;
-    }
-    .card-programas h2,
-    .card-programasleft h2 {
-        font-size: 2rem;
-    }
-    .card-programas img,
-    .card-programasleft img {
-        width: 40vw;
-        max-width: 220px;
-        height: auto;
-    }
+/*carrusel de programas*/
+.carrusel-simple {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
 }
 
-@media (max-width: 600px) {
-    .programas {
-        margin: 5% 1%;
-        gap: 12px;
+.carrusel-simple .carrusel-img {
+    display: none;
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+}
+
+.carrusel-simple .carrusel-img.active {
+    display: block;
+}
+
+.carrusel-simple .carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #176d2c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrusel-simple .carrusel-btn.prev { left: 8px; }
+.carrusel-simple .carrusel-btn.next { right: 8px; }
+.carrusel-simple .carrusel-btn:hover { background: #128c7e; }
+
+/* Botones de redes debajo del texto */
+.redes-programa {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 18px 0 0 0;
+}
+
+.btn-instagram, .btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+    gap: 10px;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.btn-whatsapp {
+    background: #25d366;
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #dd2a7b, #f58529, #515bd4, #8134af);
+}
+.btn-whatsapp:hover {
+    background: #128c7e;
+}
+
+/* Oculta iconos en desktop, muestra texto */
+.btn-icon { display: none; }
+.btn-text { display: inline; }
+
+/* Responsive: solo iconos en botones, carrusel más pequeño, botones más pequeños */
+@media (max-width: 700px) {
+    .carrusel-simple {
+        max-width: 98vw;
+        min-height: 130px;
     }
-    .card-programas,
-    .card-programasleft {
-        flex-direction: column !important;
-        align-items: stretch;
-        width: 100%;
-        padding: 10px;
+    .carrusel-simple .carrusel-img {
+        height: 130px;
+        border-radius: 10px;
+    }
+    .carrusel-simple .carrusel-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+    .redes-programa {
         gap: 10px;
-        min-height: unset;
+        margin-top: 12px;
     }
-    .card-programas img,
-    .card-programasleft img {
-        width: 100%;
-        max-width: 100%;
-        height: 160px;
-        margin: 0 auto;
+    .btn-instagram, .btn-whatsapp {
+        padding: 10px 16px;
+        font-size: 1.5rem;
+        border-radius: 22px;
     }
-    .card-programas h2,
-    .card-programasleft h2 {
-        font-size: 1.3rem;
-        margin-bottom: 8px;
+    .btn-icon { display: inline; }
+    .btn-text { display: none; }
+}
+
+/* Responsive para pantallas muy pequeñas */
+@media (max-width: 420px) {
+    .carrusel-simple {
+        min-height: 90px;
     }
-    .card-programas .card-content,
-    .card-programasleft .card-content {
-        padding: 0;
+    .carrusel-simple .carrusel-img {
+        height: 90px;
+    }
+    .redes-programa {
+        gap: 6px;
+    }
+    .btn-instagram, .btn-whatsapp {
+        padding: 8px 10px;
+        font-size: 1.2rem;
     }
 }
 /*Fin de estilos de programas*/
-/*Estilos de contacto*/
-.card-contacto {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    background: linear-gradient(90deg, rgb(4, 131, 23), rgb(0, 100, 0)) ;
-    color: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    padding: 32px;
-    margin: 40px auto;
-    max-width: 900px;
-    align-items: stretch;
-}
-
-.card-mapa {
-    flex: 1 1 50%;
-    min-width: 280px;
-    display: flex;
-    align-items: stretch;
-}
-
-.card-info {
-    flex: 1 1 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px 0 16px 16px;
-}
-
-.card-info h2 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 2.7rem;
-}
-
-.card-info h3 {
-    margin: 12px 0 4px 0;
-    font-size: 1.7rem;
-    font-weight: 700;
-}
-
-.card-info p {
-    margin: 0 0 12px 0;
-    font-size: 1.1rem;
-}
-
-@media (max-width: 700px) {
-    .card-contacto {
-        flex-direction: column;
-        padding: 16px;
-        gap: 16px;
-    }
-    .card-mapa, .card-info {
-        min-width: unset;
-        padding: 0;
-    }
-    #map {
-        min-height: 220px;
-    }
-}
-/*Fin de estilos de contacto*/
 /*Estilos Beneficiarios*/
 .beneficiarios-texto {
     color: black;
@@ -854,3 +994,4 @@ li.dropdown{
         height: 180px;
     }
 }
+/*Fin de estilos carrusel*/

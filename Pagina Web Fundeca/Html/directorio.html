@@ -13,11 +13,11 @@
     <div class="top-image">
         <img src="../Imagenes/Cintillo GDC mejorado.svg" alt="Cintillo GDC">
     </div>
-    <!--Inicio de navBar-->
+     <!--Inicio de navBar-->
     <header class="header">
         <div class="logo">
-            <a href="Index.html">
-            <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Logo Fundeca">
+            <a href="Index.html" class="logo-link">
+                <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Logo Fundeca">
             </a>
         </div>
         <nav>
@@ -37,18 +37,22 @@
         </nav>
         <a href="contacto.html" class="btn"><button>Contacto</button></a>
         <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <!-- Overlay menú móvil -->
         <div class="overlay" id="mobile-menu"> 
             <a onclick="closeNav()" href="#" class="close">&times;</a>
             <div class="overlay-content">
                 <a href="filsofia.html">Filosofía</a>
                 <div class="dropdown-mobile">
-                <a href="#">Organización</a>
-                <div class="dropdown-mobile-contenido">
-                    <a href="presidente.html">Presidente de la fundación</a>
-                    <a href="estructura.html">Estructura Organizativa</a>
-                    <a href="directorio.html">Directorio</a>
-                    <a href="marco.html">Marco Normativo</a>
-                </div>
+                    <a href="#" onclick="toggleDropdown(event)" class="dropdown-toggle">
+                        Organización <span class="arrow"></span>
+                    </a>
+                    <div class="dropdown-mobile-contenido">
+                        <a href="presidente.html">Presidente de la fundación</a>
+                        <a href="estructura.html">Estructura Organizativa</a>
+                        <a href="directorio.html">Directorio</a>
+                        <a href="marco.html">Marco Normativo</a>
+                    </div>
                 </div>
                 <a href="programas.html">Programas</a>
                 <a href="contacto.html">Contacto</a>
@@ -160,11 +164,19 @@
     </ol>
 </div>
 
-    <footer class="footer">
+<footer class="footer">
     <div class="footer-contenido">
-        <p> <strong id="gdc">Gobierno de Caracas</strong><br> Fundación para el Desarrollo Endógeno Comunal Agroalimentario <br> Desarrollado por la División de tecnologías de la información y comunicación de Fundeca<br> informaticafundeca@gmail.com  <br> &copy; 2025 Fundeca "Yerba-Caracas". Todos los derechos reservados.</p>
+    <img src="../Imagenes/logogdc.png" alt="Logo GDC" class="footer-logo">
+    <div class="footer-texto">
+    <strong id="gdc">Gobierno de Caracas</strong><br>
+    Fundación para el Desarrollo Endógeno Comunal Agroalimentario<br>
+    Desarrollado por la División de tecnologías de la información y comunicación de Fundeca<br>
+    informaticafundeca@gmail.com<br>
+    &copy; 2025 Fundeca "Yerba-Caracas". Todos los derechos reservados.
     </div>
-</footer>    
+    <img src="../Imagenes/fundecafooter.png" alt="Logo Fundeca" class="footer-logo">
+    </div>
+</footer>  
     <script type="text/JavaScript" src="../JavaScript/nav.js"></script>
 </body>
 </html>

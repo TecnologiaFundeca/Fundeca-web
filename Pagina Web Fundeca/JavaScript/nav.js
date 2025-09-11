@@ -6,7 +6,13 @@ function openNav(){
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%"
 }
+function toggleDropdown(event) {
+      event.preventDefault(); 
+      const parent = event.target.closest(".dropdown-mobile");
+      parent.classList.toggle("active");
+    }
 //Fin de animaciones de NavBar
+
 //Animaciones Quienes somos
 document.addEventListener("DOMContentLoaded", () => {
   const animados = document.querySelectorAll(".animate-left, .animate-right");
@@ -58,3 +64,34 @@ document.addEventListener("DOMContentLoaded", () => {
         showImg(current);
     }
 // Fin Carrusel Beneficiarios
+// Carrusel Programas //
+document.querySelectorAll('.carrusel-simple').forEach(function(carrusel){
+    const imgs = carrusel.querySelectorAll('.carrusel-img');
+    const prev = carrusel.querySelector('.prev');
+    const next = carrusel.querySelector('.next');
+    let idx = 0;
+
+    function showImg(i) {
+        imgs.forEach((img, j) => {
+            img.classList.toggle('active', j === i);
+        });
+    }
+
+    function nextImg() {
+        idx = (idx + 1) % imgs.length;
+        showImg(idx);
+    }
+
+    function prevImg() {
+        idx = (idx - 1 + imgs.length) % imgs.length;
+        showImg(idx);
+    }
+
+    next.addEventListener('click', nextImg);
+    prev.addEventListener('click', prevImg);
+
+    setInterval(nextImg, 5000);
+
+    showImg(idx);
+});
+// Fin Carrusel Programas //

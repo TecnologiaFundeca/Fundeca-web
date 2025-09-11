@@ -13,11 +13,11 @@
     <div class="top-image">
         <img src="../Imagenes/Cintillo GDC mejorado.svg" alt="Cintillo GDC">
     </div>
-    <!--Inicio de navBar-->
+     <!--Inicio de navBar-->
     <header class="header">
         <div class="logo">
-            <a href="Index.html">
-            <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Logo Fundeca">
+            <a href="Index.html" class="logo-link">
+                <img src="../Imagenes/Logo Fundeca Simplificado.svg" alt="Logo Fundeca">
             </a>
         </div>
         <nav>
@@ -37,18 +37,22 @@
         </nav>
         <a href="contacto.html" class="btn"><button>Contacto</button></a>
         <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <!-- Overlay menú móvil -->
         <div class="overlay" id="mobile-menu"> 
             <a onclick="closeNav()" href="#" class="close">&times;</a>
             <div class="overlay-content">
                 <a href="filsofia.html">Filosofía</a>
                 <div class="dropdown-mobile">
-                <a href="#">Organización</a>
-                <div class="dropdown-mobile-contenido">
-                    <a href="presidente.html">Presidente de la fundación</a>
-                    <a href="estructura.html">Estructura Organizativa</a>
-                    <a href="directorio.html">Directorio</a>
-                    <a href="marco.html">Marco Normativo</a>
-                </div>
+                    <a href="#" onclick="toggleDropdown(event)" class="dropdown-toggle">
+                        Organización <span class="arrow"></span>
+                    </a>
+                    <div class="dropdown-mobile-contenido">
+                        <a href="presidente.html">Presidente de la fundación</a>
+                        <a href="estructura.html">Estructura Organizativa</a>
+                        <a href="directorio.html">Directorio</a>
+                        <a href="marco.html">Marco Normativo</a>
+                    </div>
                 </div>
                 <a href="programas.html">Programas</a>
                 <a href="contacto.html">Contacto</a>
@@ -66,33 +70,80 @@
         </a>
     </div>
     <section class="programas">
-    <div class="card-programas">
-        <div class="card-content">
-            <h2>Centro Productivo Aguas Vivas</h2>
-            <p>El Centro Productivo Aguas Vivas fue creado el 17 de mayo de 2024 con el propósito de brindar acceso a agua potable a empresas cercanas y a las personas de la comunidad. Desde entonces, ha mantenido un vínculo solidario con instituciones como el <strong> Hospital del Algodonal</strong>, al que se le despacha agua regularmente, y con familias de bajos recursos que reciben donaciones sin costo alguno. <br>El 30 de septiembre de 2024 se sumó la Hielera Aguas Vivas, ampliando la capacidad de distribución y atención. <br>La calidad del agua ha sido evaluada por Sanidad, que confirmó sus buenos niveles de cloro y minerales. Además, en abril de 2024 se realizaron exámenes físicos, químicos y bacteriológicos que respaldan su pureza. <br>Como parte de su mejora continua, el 5 de septiembre de 2025 se instaló un sistema de <strong>ósmosis inversa</strong>, que permite eliminar los minerales del agua y ofrecer un sabor más dulce y agradable. <br><br> <strong>Este espacio no solo busca ofrecer un servicio, sino también acompañar a la comunidad en sus necesidades más básicas. Aguas Vivas es un esfuerzo colectivo que refleja lo que podemos lograr cuando el bienestar de todos es prioridad.</strong></p>
+    <!-- Primer card -->
+<div class="card-programas animate-left">
+    <div class="card-content">
+        <h2>Centro Productivo Aguas Vivas</h2>
+        <p>
+            El Centro Productivo Aguas Vivas fue creado el 17 de mayo de 2024 con el propósito de brindar acceso a agua potable a empresas cercanas y a las personas de la comunidad. Desde entonces, ha mantenido un vínculo solidario con instituciones como el Hospital del Algodonal, al que se le despacha agua regularmente, y con familias de bajos recursos que reciben donaciones sin costo alguno. <br>El 30 de septiembre de 2024 se sumó la Hielera Aguas Vivas, ampliando la capacidad de distribución y atención. <br>La calidad del agua ha sido evaluada por Sanidad, que confirmó sus buenos niveles de cloro y minerales. Además, en abril de 2024 se realizaron exámenes físicos, químicos y bacteriológicos que respaldan su pureza. <br>Como parte de su mejora continua, el 5 de septiembre de 2025 se instaló un sistema de ósmosis inversa, que permite eliminar los minerales del agua y ofrecer un sabor más dulce y agradable. <br>Este espacio no solo busca ofrecer un servicio, sino también acompañar a la comunidad en sus necesidades más básicas. Aguas Vivas es un esfuerzo colectivo que refleja lo que podemos lograr cuando el bienestar de todos es prioridad.
+        </p>
+        <div class="redes-programa">
+            <a href="https://www.instagram.com/aguasvivasfundeca?igsh=ZzU4dDJpbjZ1bzdz" target="_blank" class="btn-instagram">
+                <span class="btn-text">Instagram</span>
+                <i class="fab fa-instagram btn-icon"></i>
+            </a>
+            <a href="https://wa.me/584124005778" target="_blank" class="btn-whatsapp">
+                <span class="btn-text">WhatsApp</span>
+                <i class="fab fa-whatsapp btn-icon"></i>
+            </a>
         </div>
-        <img src="../Imagenes/Logo Completo.svg" alt="">
     </div>
-    <div class="card-programasleft">
-        <div class="card-content">
-            <h2><strong>Hacienda Merecure</strong></h2>
-            <p>En el corazón del estado Miranda, se está gestando un proyecto lleno de esperanza y trabajo: la Hacienda Merecure. Aunque aún está en desarrollo y en proceso de consolidación, ya se ha convertido en un espacio dedicado a la siembra de semillas de corto y mediano plazo, con el objetivo de obtener frutos y cosechas que puedan ser distribuidos de manera responsable y solidaria. <br>Este esfuerzo representa más que agricultura: es una apuesta por el crecimiento sostenible, por el fortalecimiento de la producción local y por el compromiso con las comunidades que nos rodean. <br>Cada semilla que se planta en Merecure lleva consigo el deseo de construir un futuro más justo, más verde y más autosuficiente. <br> <strong>La tierra está viva, y con ella florece la voluntad de quienes creen en el trabajo, la constancia y el valor de compartir lo que se cultiva.</strong></p>
-        </div>
-        <img src="../Imagenes/Logo Completo.svg" alt="">
+    <div class="carrusel-simple">
+        <img src="../Imagenes/hielo.png" alt="Aguas Vivas 1" class="carrusel-img active" loading="lazy">
+        <img src="../Imagenes/botellon.jpg" alt="Aguas Vivas 2" class="carrusel-img" loading="lazy">
+        <img src="../Imagenes/tomate" alt="Aguas Vivas 3" class="carrusel-img" loading="lazy">
+        <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
     </div>
-    <div class="card-programas">
-        <div class="card-content">
-            <h2><strong>Ferias Cielo Abierto</strong></h2>
-            <p>Hace ocho años nació un proyecto comprometido con el bienestar de las comunidades del Distrito Capital. Las Ferias del Campo fueron creadas para ofrecer alimentos frescos, de calidad y a precios accesibles. <br> Con el paso del tiempo, esta propuesta se ha transformado y fortalecido, dando lugar a las Ferias Cielo Abierto. Un nuevo nombre que refleja una visión más amplia, pero con el mismo propósito: llevar bienestar, alivio y oportunidades a cada familia. <br> Porque creemos que todos merecen llenar su mesa con alimentos dignos, sin sacrificios ni preocupaciones. Porque sabemos que cuando la comunidad se une, florece la esperanza. <br>Las Ferias Cielo Abierto son más que un mercado. Son un abrazo solidario, una respuesta concreta, una muestra de que sí se puede construir un país más justo desde lo cotidiano. <br><br><strong>Tu presencia transforma. Ven, comparte y construyamos juntos un futuro más justo.</strong> </p>
-        </div>
-        <img src="../Imagenes/Logo Completo.svg" alt="">
+</div>
+
+<!-- Segundo card -->
+<div class="card-programasleft animate-right">
+    <div class="card-content">
+        <h2>Hacienda Merecure</h2>
+        <p>
+            En el corazón del estado Miranda, se está gestando un proyecto lleno de esperanza y trabajo: la Hacienda Merecure. Aunque aún está en desarrollo y en proceso de consolidación, ya se ha convertido en un espacio dedicado a la siembra de semillas de corto y mediano plazo, con el objetivo de obtener frutos y cosechas que puedan ser distribuidos de manera responsable y solidaria. <br>Este esfuerzo representa más que agricultura: es una apuesta por el crecimiento sostenible, por el fortalecimiento de la producción local y por el compromiso con las comunidades que nos rodean. <br>Cada semilla que se planta en Merecure lleva consigo el deseo de construir un futuro más justo, más verde y más autosuficiente. <br>La tierra está viva, y con ella florece la voluntad de quienes creen en el trabajo, la constancia y el valor de compartir lo que se cultiva.
+        </p>
     </div>
+    <div class="carrusel-simple">
+        <img src="../Imagenes/merecure1.jpg" alt="Merecure 1" class="carrusel-img active" loading="lazy">
+        <img src="../Imagenes/merecure2.jpg" alt="Merecure 2" class="carrusel-img" loading="lazy">
+        <img src="../Imagenes/merecure3.jpg" alt="Merecure 3" class="carrusel-img" loading="lazy">
+        <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+
+<!-- Tercer card -->
+<div class="card-programas animate-left">
+    <div class="card-content">
+        <h2>Ferias Cielo Abierto</h2>
+        <p>
+            Hace ocho años nació un proyecto comprometido con el bienestar de las comunidades del Distrito Capital. Las Ferias del Campo fueron creadas para ofrecer alimentos frescos, de calidad y a precios accesibles. <br>Con el paso del tiempo, esta propuesta se ha transformado y fortalecido, dando lugar a las Ferias Cielo Abierto. Un nuevo nombre que refleja una visión más amplia, pero con el mismo propósito: llevar bienestar, alivio y oportunidades a cada familia. <br>Porque creemos que todos merecen llenar su mesa con alimentos dignos, sin sacrificios ni preocupaciones. Porque sabemos que cuando la comunidad se une, florece la esperanza. <br>Las Ferias Cielo Abierto son más que un mercado. Son un abrazo solidario, una respuesta concreta, una muestra de que sí se puede construir un país más justo desde lo cotidiano. <br>Tu presencia transforma. Ven, comparte y construyamos juntos un futuro más justo.
+        </p>
+    </div>
+    <div class="carrusel-simple">
+        <img src="../Imagenes/feria1.jpg" alt="Ferias 1" class="carrusel-img active" loading="lazy">
+        <img src="../Imagenes/feria2.jpg" alt="Ferias 2" class="carrusel-img" loading="lazy">
+        <img src="../Imagenes/feria3.jpg" alt="Ferias 3" class="carrusel-img" loading="lazy">
+        <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
 </section>
-    <footer class="footer">
+<footer class="footer">
     <div class="footer-contenido">
-        <p> <strong id="gdc">Gobierno de Caracas</strong><br> Fundación para el Desarrollo Endógeno Comunal Agroalimentario <br> Desarrollado por la División de tecnologías de la información y comunicación de Fundeca<br> informaticafundeca@gmail.com  <br> &copy; 2025 Fundeca "Yerba-Caracas". Todos los derechos reservados.</p>
+    <img src="../Imagenes/logogdc.png" alt="Logo GDC" class="footer-logo">
+    <div class="footer-texto">
+    <strong id="gdc">Gobierno de Caracas</strong><br>
+    Fundación para el Desarrollo Endógeno Comunal Agroalimentario<br>
+    Desarrollado por la División de tecnologías de la información y comunicación de Fundeca<br>
+    informaticafundeca@gmail.com<br>
+    &copy; 2025 Fundeca "Yerba-Caracas". Todos los derechos reservados.
     </div>
-</footer>  
+    <img src="../Imagenes/fundecafooter.png" alt="Logo Fundeca" class="footer-logo">
+    </div>
+</footer>
     <script type="text/JavaScript" src="../JavaScript/nav.js"></script>
 </body>
 </html>
