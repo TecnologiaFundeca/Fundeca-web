@@ -840,9 +840,10 @@ li.dropdown{
     display: none;
     width: 100%;
     height: 450px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+
 }
 
 .carrusel-simple .carrusel-img.active {
@@ -871,12 +872,56 @@ li.dropdown{
 .carrusel-simple .carrusel-btn.prev { left: 8px; }
 .carrusel-simple .carrusel-btn.next { right: 8px; }
 .carrusel-simple .carrusel-btn:hover { background: #128c7e; }
-@media (max-width: 800px){
-    .programas{
-        display: none;
-    }
+.card-programas-mobile {
+    display: none;
 }
 
+@media (max-width: 800px) {
+    .card-programas,
+    .card-programasleft {
+        display: none !important;
+    }
+    .card-programas-mobile {
+        display: block;
+        margin: 0 20px 18px 20px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        border-radius: 18px;
+        background: #fff;
+        padding: 2% 0;
+    }
+    .card-programas-mobile .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 8px;
+    }
+    .card-programas-mobile h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        color: #176d2c;
+    }
+    .card-programas-mobile .carrusel-simple {
+        width: 80vw;
+        max-width: 100vw;
+        min-height: 200px;
+        height: 30%;
+        max-height: 30vw;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+    .card-programas-mobile .carrusel-simple img{
+        width: 100%;
+        height: 50%;
+    }
+    .card-programas-mobile p {
+        font-size: 0.7rem;
+        text-align: justify;
+        margin-bottom: 8px;
+        max-width: 90vw;
+    }
+}
 /* Botones de redes debajo del texto */
 .redes-programa {
     display: flex;
