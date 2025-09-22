@@ -7,9 +7,9 @@ function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%"
 }
 function toggleDropdown(event) {
-      event.preventDefault(); 
-      const parent = event.target.closest(".dropdown-mobile");
-      parent.classList.toggle("active");
+    event.preventDefault(); 
+    const parent = event.target.closest(".dropdown-mobile");
+    parent.classList.toggle("active");
     }
 //Fin de animaciones de NavBar
 
