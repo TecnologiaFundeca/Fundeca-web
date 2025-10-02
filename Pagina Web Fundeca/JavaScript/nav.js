@@ -15,20 +15,20 @@ function toggleDropdown(event) {
 
 //Animaciones Quienes somos
 document.addEventListener("DOMContentLoaded", () => {
-  const animados = document.querySelectorAll(".animate-left, .animate-right");
+    const animados = document.querySelectorAll(".animate-left, .animate-right");
 
-  function mostrarAnimados() {
+    function mostrarAnimados() {
     animados.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
         el.classList.add("show");
-      } else {
+        } else {
         el.classList.remove("show")
-      }
+        }
     });
-  }
+}
 
-  window.addEventListener("scroll", mostrarAnimados);
+    window.addEventListener("scroll", mostrarAnimados);
   mostrarAnimados(); // por si hay elementos visibles al cargar
 });
 //Fin de animaciones Quienes somos
