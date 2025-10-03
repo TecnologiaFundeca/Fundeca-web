@@ -336,8 +336,20 @@ li.dropdown{
     font-size: 1rem;
     animation: fadeIn 2s ease forwards;
     padding: 0 15%;
-
 }
+@media screen and (max-width: 800px) {
+    .hero {
+        border-radius: 0 0 20% 20%;
+    }
+}
+    .hero .hero-contenido .fundeca{
+        font-size: 5rem;
+        letter-spacing: 10px;
+    }
+    .hero .hero-contenido .fundeca-texto{
+        font-size: 0.7rem;
+        padding: 0 5%;
+    }
 @keyframes slideUp {
     0% { transform: translateY(50px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
@@ -357,8 +369,6 @@ li.dropdown{
     font-size: 2.2rem;
     color: #176d2c;
 }
-
-
 .somos {
     display: flex;
     align-items: center;
