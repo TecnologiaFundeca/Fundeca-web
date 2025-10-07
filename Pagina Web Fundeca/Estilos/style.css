@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     background: #fff;
     color: black;
@@ -334,22 +338,17 @@ li.dropdown{
 }
 .hero .hero-contenido .fundeca-texto{
     font-size: 1rem;
-    animation: fadeIn 2s ease forwards;
+    animation: slideUp 1.2s ease-out;
     padding: 0 15%;
 }
-@media screen and (max-width: 800px) {
-    .hero {
-        border-radius: 0 0 20% 20%;
-    }
-}
+@media screen and (max-width: 800px){
     .hero .hero-contenido .fundeca{
-        font-size: 5rem;
-        letter-spacing: 10px;
+        font-size: 650%;
     }
     .hero .hero-contenido .fundeca-texto{
-        font-size: 0.7rem;
-        padding: 0 5%;
+        font-size: 0.5rem;
     }
+}
 @keyframes slideUp {
     0% { transform: translateY(50px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
@@ -1102,7 +1101,6 @@ li.dropdown{
 
 @media (max-width: 600px) {
     .carrusel-imagenes {
-        width: 90vw;
         height: 180px;
     }
 }
