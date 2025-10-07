@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://fundeca.netlify.app/sitemap.xml
