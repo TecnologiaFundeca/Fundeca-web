@@ -26,15 +26,24 @@ body {
     z-index: 2;
     background-color: #fff;
     display: flex;
-    align-items: flex-start; /* alinea arriba si la imagen es más alta */
 }
 
 .top-image img {
     height: 100%;      /* ocupa todo el alto del div */
-    width: 40%;       /* mantiene proporción, no se estira */
-    object-fit: cover; /* recorta si es más grande */
+    width: 350px;       /* mantiene proporción, no se estira */
+    object-fit: cover;
     display: block;
     margin-left: 0;    /* alineado a la izquierda */
+}
+@media screen and (max-width: 500px){
+     .top-image img{
+        width: 250px;
+     }
+}
+@media screen and (max-width: 400px){
+     .top-image img{
+        width: 200px;
+     }
 }
 /*Diseño NavBar*/
 .header{
@@ -348,6 +357,19 @@ li.dropdown{
     .hero .hero-contenido .fundeca-texto{
         font-size: 0.5rem;
     }
+}
+@media screen and (max-width: 500px){
+     .hero .hero-contenido .fundeca{
+        font-size: 500%;
+     }
+}
+@media screen and (max-width: 400px){
+    .hero{
+        padding: 15% 0 15% 0;
+    }
+     .hero .hero-contenido .fundeca{
+        font-size: 300%;
+     }
 }
 @keyframes slideUp {
     0% { transform: translateY(50px); opacity: 0; }
